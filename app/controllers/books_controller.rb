@@ -3,12 +3,13 @@ before_action :authenticate_user!
 before_action :ensure_correct_user, only: [:edit]
   def show
   	@book = Book.find(params[:id])
-    @user = @book.user
+    @favorite = Favorite.new
   end
 
   def index
   	@books = Book.all
-    @book = Book.new #一覧表示するためにBookモデルの情報を全てくださいのall
+    @book = Book.new
+    @favorite = Favorite.new #一覧表示するためにBookモデルの情報を全てくださいのall
   end
 
   def create
