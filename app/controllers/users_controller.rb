@@ -17,7 +17,6 @@ class UsersController < ApplicationController
   def search
     @user = current_user
     @book = Book.new
-
     method = params[:search_method]
     search = params[:search]
     kind = params[:search_kind]
