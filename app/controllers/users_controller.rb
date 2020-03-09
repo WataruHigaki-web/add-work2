@@ -14,6 +14,22 @@ class UsersController < ApplicationController
   	@book = Book.new #new bookの新規投稿で必要（保存処理はbookコントローラー側で実施）
   end
 
+  def search
+    @user = current_user
+    @book = Book.new
+
+    method = params[:search_method]
+    search = params[:search]
+    kind = params[:search_kind]
+    if kind == "user_name"
+      @users = User.search(kind,method,search)
+      render 'users/index'
+    else
+      @books = Book.search(kind,method,search)
+      render 'books/index'
+    end
+  end
+
   def edit
   	@user = User.find(params[:id])
   end
