@@ -1,1 +1,28 @@
-a
+<% @user.followings.each do |user| %>
+<table>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= link_to "詳細",user_path(user) %></td>
+    <td>
+      <% @user ||= current_user %>
+        フォロー数
+            <strong id="following">
+              <%= user.followings.count %>
+            </strong>
+    </td>
+    <td>
+      フォロワー数
+          <strong id="followers" class="stat">
+            <%= user.followers.count %>
+          </strong>
+    </td>
+    <td>
+      <% unless current_user?(user) %>
+        <div id="follow_form">
+          <%= render 'users/follow',user: @user %>
+        </div>
+      <% end %>
+    </td>
+  </tr>
+</table>
+<% end %>
