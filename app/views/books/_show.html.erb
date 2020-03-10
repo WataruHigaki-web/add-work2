@@ -1,0 +1,42 @@
+<table class="table">
+    <tr>
+      <td>
+        <%= link_to (@bookfind.user) do %>
+        <%= attachment_image_tag(@bookfind.user, :profile_image, :fill, 100, 100, fallback: "no-image-mini.jpg") %><br>
+        <%= @bookfind.user.name %>
+        <% end %>
+      </td>
+      <td><%= link_to @bookfind.title, @bookfind %></td>
+      <td><%= @bookfind.body %></td>
+
+      <td>
+        <%= render 'favorites/favorite',book: @bookfind %>
+      </td>
+
+      <td>
+        コメント数:<%= @comments.count%>
+      </td>
+      <td>
+        <% if @bookfind.user == current_user %>
+          <%= link_to "Edit",edit_book_path(@bookfind), class: "btn-sm btn-success edit_book_#{@bookfind.id}" %>
+        <% else %>
+        <% end %>
+        </td>
+      <td>
+        <% if @bookfind.user == current_user %>
+          <%= link_to "Destroy",@bookfind, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger destroy_book_#{@bookfind.id}" %>
+        <% else %>
+        <% end %>
+        </td>
+    </tr>
+  </table>
+
+      <h2>コメント</h2>
+      <div id ="comments_form">
+        <% if user_signed_in? %>
+          <%= render 'book_comments/form',comment: @comment, bookfind: @bookfind %>
+        <% end %>
+      </div>
+      <div id="comments_area">
+       <%= render 'book_comments/index',comments: @comments, bookfind: @bookfind %>
+      </div>

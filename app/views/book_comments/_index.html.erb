@@ -1,0 +1,16 @@
+<% comments.each do |comment| %>
+  <table class="table .table">
+    <tr>
+      <td>
+      <%= comment.user.name %>
+      </td>
+      <td><%= comment.content %></td>
+      <td>
+      <% if comment.user == current_user %>
+        <%= link_to '削除',book_book_comment_path(comment.book_id, comment.id),method: :delete,"data-confirm" => "本当に削除しますか？",remote: true %>
+      <% else %>
+      <% end %>
+      </td>
+    </tr>
+  </table>
+<% end %>
