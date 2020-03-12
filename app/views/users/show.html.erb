@@ -73,7 +73,7 @@ function initMap(){
   });
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGTYYoPxgarviXdjRHF4ZcgMYfF9nctlQ&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['SECRET_KEY']%>&callback=initMap" async defer></script>
 </div>
 <% else %>
 <% end %>
