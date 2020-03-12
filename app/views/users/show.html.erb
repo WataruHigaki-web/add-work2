@@ -37,5 +37,46 @@
 </table>
 <!--books一覧 -->
 </div>
+
+<% if @user.id == current_user.id %>
+<div class="col-xs-12">
+<h2>Your Map</h2>
+
+<div id='map'></div>
+
+<style>
+#map {
+  height: 600px;
+  width: 100%;
+}
+</style>
+
+<script>
+let map
+
+
+
+function initMap(){
+  geocoder = new google.maps.Geocoder();
+
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: <%= Geocoder.search(current_user.address).first.coordinates.first %>,
+            lng: <%= Geocoder.search(current_user.address).first.coordinates.last %>},
+    zoom: 12,
+  });
+
+  marker = new google.maps.Marker({
+    position:  {lat: <%= Geocoder.search(current_user.address).first.coordinates.first %>,
+                lng: <%= Geocoder.search(current_user.address).first.coordinates.last %>},
+    map: map
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGTYYoPxgarviXdjRHF4ZcgMYfF9nctlQ&callback=initMap" async defer></script>
 </div>
+<% else %>
+<% end %>
+</div>
+
 

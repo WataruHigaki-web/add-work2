@@ -1,0 +1,21 @@
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.5 -r ./siteconf20200311-16212-1qyjpu6.rb extconf.rb
+creating Makefile
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+make: Warning: File 'Makefile' has modification time 810 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+make: Warning: File 'Makefile' has modification time 810 s in the future
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+make: Warning: File 'Makefile' has modification time 809 s in the future
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200311-16212-ezlj4x/skiptrace/internal
+make: warning:  Clock skew detected.  Your build may be incomplete.

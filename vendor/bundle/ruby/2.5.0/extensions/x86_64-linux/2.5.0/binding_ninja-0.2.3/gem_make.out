@@ -1,0 +1,21 @@
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+/usr/bin/ruby2.5 -r ./siteconf20200311-16212-g5ljdb.rb extconf.rb
+creating Makefile
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make "DESTDIR=" clean
+make: Warning: File 'Makefile' has modification time 809 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make "DESTDIR="
+make: Warning: File 'Makefile' has modification time 809 s in the future
+compiling binding_ninja.c
+linking shared-object binding_ninja/binding_ninja.so
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /vagrant/bookers2-debug/vendor/bundle/ruby/2.5.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make "DESTDIR=" install
+make: Warning: File 'Makefile' has modification time 809 s in the future
+/usr/bin/install -c -m 0755 binding_ninja.so ./.gem.20200311-16212-px7eb0/binding_ninja
+make: warning:  Clock skew detected.  Your build may be incomplete.
