@@ -55,8 +55,8 @@ GEM
     adamantium (0.2.0)
       ice_nine (~> 0.11.0)
       memoizable (~> 0.4.0)
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.7.4)
@@ -116,23 +116,12 @@ GEM
     faker (2.10.2)
       i18n (>= 1.6, < 2)
     ffi (1.12.2)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     geocoder (1.6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    http (4.3.0)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      http-parser (~> 1.2.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (2.3.0)
-    http-parser (1.2.1)
-      ffi-compiler (>= 1.0, < 2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -191,7 +180,7 @@ GEM
       yard (~> 0.9.11)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    public_suffix (4.0.3)
+    public_suffix (5.0.0)
     puma (3.12.4)
     rack (2.2.2)
     rack-protection (2.0.8.1)
@@ -350,7 +339,6 @@ DEPENDENCIES
   factory_bot_rails
   faker
   geocoder
-  http
   jbuilder (~> 2.5)
   jp_prefecture
   jquery-rails
